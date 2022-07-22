@@ -1,0 +1,22 @@
+<div class="container"><br>
+  <h2 style="text-align: center;padding:30px"> Manage Blog</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let a of BlogList; let i = index">
+      <tr>
+        <td>{{a.id}}</td>
+        <td>{{"blog"+(i+1)}}</td>
+        <td><a class="btn" (click)="Pclick(i)">[Delete]</a> </td>
+        <td><a class="btn" (click)="Pclick1()">[View]</a> </td>
+        <td><a class="btn" (click)="Pclick2()">[Edit]</a> </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

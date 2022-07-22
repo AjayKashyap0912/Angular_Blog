@@ -1,0 +1,19 @@
+<div class="tab-content">
+  <!-- Home Tab -->
+  <div id="home" class="container tab-pane active"><br>
+
+    <!-- card template -->
+    <div class="row">
+      <div *ngIf="condition" class="col-12 row" style="text-align:center">
+        <h1>{{some}}</h1>
+        <p style="font-size: medium;">{{some2}}</p>
+        <button (click)="hide()">back</button>
+      </div>
+      <div *ngIf="!condition" class="col-12 row">
+        <h2 style="text-align: center;padding:30px">My Blog</h2>
+        <div *ngFor="let a of ViewData;" class="col-sm-4">
+          <app-view [carddata]="[a]" (notify)="onNotify($event)"></app-view>
+        </div>
+      </div>
+    </div>
+  </div>

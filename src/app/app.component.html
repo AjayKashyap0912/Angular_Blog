@@ -1,0 +1,44 @@
+<!-- Main container -->
+<div class="container boder">
+  <div class="row">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light boder">
+      <div class="container">
+          <button class="navbar-toggler" type="button" 
+                  data-toggle="collapse"
+                  data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false" 
+                  aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" 
+               id="navbarSupportedContent">
+              <ul class=" nav navbar-nav navbar-center">
+                  <li class="nav-item active">
+                      <a class="nav-link" 
+                      (click)="goToIndex()">
+                        <b>Home</b> 
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" 
+                      (click)="goToCreatBlog()">
+                        <b>Create-Blog</b>
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" 
+                      (click)="goToManageBlog()">
+                       <b>Manage-Blog</b> 
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+    <router-outlet></router-outlet>
+
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="container"><br>
+  <h2 style="text-align: center;padding:30px">Create New Blog</h2>
+  <div class="formboder pos1">
+    <form (ngSubmit)="onSubmit(myform)" #myform="ngForm">
+      <div class="col-12 mb-3 mt-3 form-group">
+        <label for="title" class="col form-label lablestyle ">Title * :</label>
+        <input type="text" name="title" class="form-control newstyleform" #title="ngModel" id="title"
+          placeholder="Title" ngModel required>
+        <div class="alert alert-danger" *ngIf="title.touched && !title.valid"> please fill title </div>
+      </div>
+      <div class="mb-3 form-group">
+        <label for="Desc" class="form-label lablestyle">Description * :</label>
+        <textarea class="form-control newstyleform" style="height:150px;" id="Desc" #Desc="ngModel"
+          placeholder="Description" name="Desc" minlength="150" ngModel required></textarea>
+        <div class="alert alert-danger" *ngIf="Desc.touched && Desc.hasError('required')"> please fill
+          Description </div>
+        <div class="alert alert-danger" *ngIf="Desc.touched && Desc.hasError('minlength')">minimum charactor is
+          150 </div>
+      </div>
+      <button type="submit" class="btn btn-success">Post</button>
+    </form>
+  </div>
+</div>
+
